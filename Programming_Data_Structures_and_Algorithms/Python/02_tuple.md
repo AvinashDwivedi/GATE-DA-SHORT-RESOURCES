@@ -1,10 +1,11 @@
 ### 1. What is a tuple?
 
 * A tuple is an **ordered**, **immutable** collection of items (elements) that can hold heterogeneous types. 
-```python
-# literal syntax:
-T = (1, "a", 3.14, (2,3))
-```
+
+    ```python
+    # literal syntax:
+    T = (1, "a", 3.14, (2,3))
+    ```
 
 ---
 
@@ -48,11 +49,12 @@ T[::-1]    # reversed tuple
 ### 5. Immutability & “copying”  
 * Tuples are **immutable**: you cannot change, add, or remove items once created. 
 * To “modify”, you must create a new tuple.  
-```python
-T = (1,2,3)
-# T[0] = 99     # → TypeError
-T2 = T + (4,)   # new tuple
-```
+
+    ```python
+    T = (1,2,3)
+    # T[0] = 99     # → TypeError
+    T2 = T + (4,)   # new tuple
+    ```
 * Since they cannot change, the concept of “shallow vs deep copy” is less relevant, but if nested mutable objects exist inside the tuple they *can* still mutate.
 
 ---
@@ -105,7 +107,7 @@ Let `n = len(T)`. Since tuples are fixed-size sequences:
 * Membership test `x in T`: O(n)  
 * Unpacking assignments: O(n) roughly.  
 (Immutability means no insert/remove operations.)  
-Note: Many operations that mutate lists are invalid for tuples.
+**Note** : *Many operations that mutate lists are invalid for tuples.*
 
 ---
 
@@ -183,12 +185,13 @@ x, y, z = (10,20,30)
 **Problem 1**: Given a tuple `T`, return a new tuple with the first and last elements swapped.  
 * Hint: Use unpacking and slicing.  
 * Sample solution:  
-```python
-def swap_first_last(T):
-    if len(T) < 2:
-        return T
-    return (T[-1],) + T[1:-1] + (T[0],)
-```
+
+    ```python
+    def swap_first_last(T):
+        if len(T) < 2:
+            return T
+        return (T[-1],) + T[1:-1] + (T[0],)
+    ```
 
 **Problem 2**: Given a tuple `T`, check if the tuple is palindrome (reads the same forwards and backwards).  
 * Hint: `T == T[::-1]`.

@@ -1,10 +1,10 @@
 ### 1. What is a dictionary?
 
 * A dictionary is a **mutable**, **ordered** (from Python 3.7 onward) collection of **key:value** pairs, where keys are *unique* and *hashable*.  
-```python
-# literal syntax:
-D = {"brand": "Ford", "model": "Mustang", "year": 1964}
-``` 
+    ```python
+    # literal syntax:
+    D = {"brand": "Ford", "model": "Mustang", "year": 1964}
+    ``` 
 
 ---
 
@@ -52,9 +52,10 @@ Some key methods you must know:
 * `len(D)`, `min(D)`, `max(D)` (on keys)  
 * `sorted(D)` returns sorted list of keys; `sorted(D.items(), key=…)` for sorted key‑value pairs.  
 * Dictionary comprehension:  
-```python
-squares = {x: x*x for x in range(6)}
-```
+
+    ```python
+    squares = {x: x*x for x in range(6)}
+    ```
 * Conversion between dict and list of tuples: `dict(zip(keys, values))`
 
 ---
@@ -93,10 +94,11 @@ Note: Worst‑case hash collisions degrade performance but rare in Python’s im
 * Use dictionaries when you need fast lookup by unique key (e.g., mapping user IDs to records).  
 * Use `defaultdict`, `Counter`, etc. from `collections` for specialized use‑cases (though outside core ‘dict’).  
 * Use `dict.items()` in loops when you need both key + value:  
-```python
-for key, value in D.items():
-    ...
-```  
+
+    ```python
+    for key, value in D.items():
+        ...
+    ```  
 * When you need key‑order independent behavior (just membership or mapping), use `dict` vs list for faster lookup.  
 * Avoid using mutable objects (like lists) as keys — will raise `TypeError`.  
 * If you need to merge dictionaries: use unpacking `{**D1, **D2}` or `D1.update(D2)`.

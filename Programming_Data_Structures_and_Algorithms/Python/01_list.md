@@ -1,9 +1,10 @@
 ### 1. What is a list?
 
 * A list is an ordered, mutable collection of items (elements) that can hold heterogeneous types.
-```python
-Literal syntax: [].Example: L = [1, "a", 3.14, [2,3]].
-```
+
+    ```python
+    Literal syntax: [].Example: L = [1, "a", 3.14, [2,3]].
+    ```
 ---
 
 ### 2. Creating lists
@@ -226,12 +227,13 @@ Reverse list in-place without builtin:
 * Hint: two-pointer swap.
 
 * Solution:
-```python
-i, j = 0, len(L)-1
-while i < j:
-    L[i], L[j] = L[j], L[i]
-    i += 1; j -= 1
-```
+
+    ```python
+    i, j = 0, len(L)-1
+    while i < j:
+        L[i], L[j] = L[j], L[i]
+        i += 1; j -= 1
+    ```
 
 Rotate list right by k:
 
