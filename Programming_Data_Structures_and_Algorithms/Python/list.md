@@ -290,6 +290,7 @@ Revise cheat sheet daily.
 ### 21. Recommended practice problems (easy→hard)
 
 Reverse, rotate, remove duplicates, merge two sorted lists, sliding window max, two-sum (using dict), longest increasing subsequence (uses lists + DP), reshape matrix, spiral order traversal.
+
 ---
 ### 22. Final quick tips
 
