@@ -114,6 +114,7 @@ rows = 3; cols = 4
 mat = [[0]*cols for _ in range(rows)]
 mat[0][0] = 5   # only affects mat[0][0]
 ```
+
 ---
 ### 11. Time complexity (big-O) — important for GATE
 
@@ -140,6 +141,7 @@ mat[0][0] = 5   # only affects mat[0][0]
 * sort: O(n log n) average (TimSort)
 
 * reverse: O(n)
+
 ---
 ### 12. Memory model & implementation notes
 
@@ -148,6 +150,7 @@ mat[0][0] = 5   # only affects mat[0][0]
 * Amortized resizing strategy grows capacity to avoid frequent reallocations.
 
 * Lists store references; elements themselves live elsewhere.
+
 ---
 ### 13. Idiomatic patterns & tips
 
@@ -162,24 +165,26 @@ mat[0][0] = 5   # only affects mat[0][0]
 * Use zip for parallel loops.
 
 * Prefer list comprehensions for clarity and speed over map/lambda in many cases.
+
 ---
 ### 14. Common pitfalls (GATE trap examples)
 
-* Shared references in nested list creation:
+Shared references in nested list creation:
 
 * Wrong: a = [[0]*3]*3 leads to shared rows.
 
-* Mutability when copying:
+Mutability when copying:
 
 * b = a does not copy; both refer same list.
 
-* Using list + vs append:
+Using list + vs append:
 
 * L = L + [x] creates a new list (O(n)); prefer append.
 
 * Sorting list of tuples: sorts by first element then second.
 
 * Using min/max on empty list → ValueError.
+
 ---
 ### 15. Useful short examples
 
